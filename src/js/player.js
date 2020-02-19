@@ -114,8 +114,11 @@ class DPlayer {
         }
 
         this.setting = new Setting(this);
-        this.episode = new Episode(this);
         this.plugins = {};
+
+        if (options.showEpisode) {
+            new Episode(this);
+        }
 
         document.addEventListener(
             'click',
