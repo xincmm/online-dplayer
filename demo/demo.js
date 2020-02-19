@@ -60,6 +60,7 @@ function initPlayers () {
         preload: 'none',
         screenshot: true,
         showEpisode: true,
+        episodes: [{"id":41854,"topicId":3635,"genre":"video","index":1,"name":"第1集","path":"http://202.119.245.12:8080/2020-02-11/紧急呼救:孤星/1.mp4"},{"id":41855,"topicId":3635,"genre":"video","index":2,"name":"第2集","path":"http://202.119.245.12:8080/2020-02-11/紧急呼救:孤星/2.mp4"},{"id":41856,"topicId":3635,"genre":"video","index":3,"name":"第3集","path":"http://202.119.245.12:8080/2020-02-11/紧急呼救:孤星/3.mp4"},{"id":41857,"topicId":3635,"genre":"video","index":4,"name":"第4集","path":"http://202.119.245.12:8080/2020-02-11/紧急呼救:孤星/4.mp4"}],
         video: {
             url: 'https://api.dogecloud.com/player/get.mp4?vcode=5ac682e6f8231991&userId=17&ext=.mp4',
             pic: 'https://i.loli.net/2019/06/06/5cf8c5d9c57b510947.png',

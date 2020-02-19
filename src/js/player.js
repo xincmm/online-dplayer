@@ -299,8 +299,11 @@ class DPlayer {
         this.video.poster = video.pic ? video.pic : '';
         this.video.src = video.url;
         this.initMSE(this.video, video.type || 'auto');
-        if (currentEpisode) {
-            this.options.currentEpisode = currentEpisode
+        console.log(currentEpisode);
+        console.log('执行');
+        if (currentEpisode >= 0) {
+            this.options.currentEpisode = currentEpisode;
+            console.log(`当前 index: ${currentEpisode}`);
         }
         if (danmakuAPI) {
             this.template.danmakuLoading.style.display = 'block';

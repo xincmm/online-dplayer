@@ -22,8 +22,7 @@ class Episode {
                 item.classList.add('episode-active');
                 this.player.switchVideo({
                     url: this.player.options.episodes[index].path,
-                });
-                this.player.options.currentEpisode = index;
+                }, null,  index);
             });
         });
     }
