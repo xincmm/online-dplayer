@@ -127,7 +127,7 @@
             </button>
         </div>
         {{ /if }}
-
+        {{ if options.showEpisode }}
         <div class="dplayer-episode">
              <span class="dplayer-episode-icon">选集</span>
              <div class="dplayer-episode-box">
@@ -140,6 +140,7 @@
                 </div>
              </div>
         </div>
+        {{ /if }}
 
         <div class="dplayer-setting">
             <button class="dplayer-icon dplayer-setting-icon" data-balloon="{{ tran('Setting') }}" data-balloon-pos="up">
