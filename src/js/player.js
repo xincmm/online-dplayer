@@ -299,11 +299,16 @@ class DPlayer {
         this.video.poster = video.pic ? video.pic : '';
         this.video.src = video.url;
         this.initMSE(this.video, video.type || 'auto');
-        console.log(currentEpisode);
-        console.log('执行');
         if (currentEpisode >= 0) {
-            this.options.currentEpisode = currentEpisode;
             console.log(`当前 index: ${currentEpisode}`);
+            Array.prototype.slice.call(this.template.episodes).forEach((item, index) => {
+                if (currentEpisode !== index) {
+                    this.template.episodes[this.options.currentEpisode].classList.remove('episode-active');
+                } else {
+                    item.classList.add('episode-active');
+                }
+            });
+            this.options.currentEpisode = currentEpisode;
         }
         if (danmakuAPI) {
             this.template.danmakuLoading.style.display = 'block';
