@@ -294,11 +294,14 @@ class DPlayer {
      * @param {Object} video - new video info
      * @param {Object} danmaku - new danmaku info
      */
-    switchVideo(video, danmakuAPI) {
+    switchVideo(video, danmakuAPI, currentEpisode) {
         this.pause();
         this.video.poster = video.pic ? video.pic : '';
         this.video.src = video.url;
         this.initMSE(this.video, video.type || 'auto');
+        if (currentEpisode) {
+            this.options.currentEpisode = currentEpisode
+        }
         if (danmakuAPI) {
             this.template.danmakuLoading.style.display = 'block';
             this.bar.set('played', 0, 'width');
