@@ -67,6 +67,22 @@ class DPlayer {
         });
 
         this.video = this.template.video;
+        // 画中画
+        if (this.options.pip && this.template.pipButton) {
+            this.template.pipButton.addEventListener('click', () => {
+                if (!document.pictureInPictureElement) {
+                    // 开启
+                    this.video.requestPictureInPicture().catch((error) => {
+                        console.log(error, 'Video failed to enter Picture-in-Picture mode.');
+                    });
+                } else {
+                    // 关闭
+                    document.exitPictureInPicture().catch((error) => {
+                        console.log(error, 'Video failed to leave Picture-in-Picture mode.');
+                    });
+                }
+            });
+        }
 
         this.bar = new Bar(this.template);
 

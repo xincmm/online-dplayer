@@ -127,6 +127,13 @@
             </button>
         </div>
         {{ /if }}
+        {{ if options.pip }}
+        <div class="dplayer-subtitle-btn">
+            <button class="dplayer-icon dplayer-pip-icon" data-balloon="{{ tran('Hide subtitle') }}" data-balloon-pos="up">
+                <span class="dplayer-icon-content">{{@ icons.pip }}</span>
+            </button>
+        </div>
+        {{ /if }}
         {{ if options.showEpisode }}
         <div class="dplayer-episode">
              <span class="dplayer-episode-icon">选集</span>

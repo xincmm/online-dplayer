@@ -47,6 +47,7 @@ class Template {
         this.settingButton = this.container.querySelector('.dplayer-setting-icon');
         this.settingBox = this.container.querySelector('.dplayer-setting-box');
         this.episodeButton = this.container.querySelector('.dplayer-episode-icon');
+        this.pipButton = this.container.querySelector('.dplayer-pip-icon');
         this.episodeBox = this.container.querySelector('.dplayer-episode-box');
         this.episodes = this.container.querySelectorAll('.dplayer-episode-item');
         this.mask = this.container.querySelector('.dplayer-mask');

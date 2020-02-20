@@ -291,6 +291,8 @@
         }
         &.dplayer-icons-right {
             right: 20px;
+            display: flex;
+            align-items: center;
             .dplayer-icon {
                 padding: 8px;
             }
@@ -417,6 +419,7 @@
                 font-size: 14px;
                 color: white;
                 cursor: pointer;
+                padding: 0 8px;
             }
 
             .dplayer-episode-box {
@@ -463,8 +466,8 @@
                     cursor: pointer;
                 }
                 .episode-active {
-                    border: 1px solid #368cf4;
-                    color: #368cf4;
+                    border: 1px solid #00a1d6;
+                    color: #00a1d6;
                 }
             }
         }

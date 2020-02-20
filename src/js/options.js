@@ -1,5 +1,6 @@
 /* global DPLAYER_VERSION */
 import defaultApiBackend from './api.js';
+import utils from './utils';
 
 export default (options) => {
     // default options
@@ -18,6 +19,7 @@ export default (options) => {
         video: {},
         contextmenu: [],
         mutex: true,
+        pip: utils.isChrome, // 画中画
         showEpisode: false, // 显示分集
         episodes: [], // 集列表
         currentEpisode: 0, // 当前集数
