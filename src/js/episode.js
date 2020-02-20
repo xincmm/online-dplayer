@@ -23,6 +23,7 @@ class Episode {
                 this.player.switchVideo({
                     url: this.player.options.episodes[index].path,
                 }, null,  index);
+                this.hide()
             });
         });
     }
