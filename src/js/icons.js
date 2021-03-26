@@ -15,6 +15,7 @@ import camera from '../assets/camera.svg';
 import subtitle from '../assets/subtitle.svg';
 import loading from '../assets/loading.svg';
 import pip from '../assets/pip.svg';
+import episodes from '../assets/episodes.svg';
 
 const Icons = {
     play: play,
@@ -33,7 +34,8 @@ const Icons = {
     camera: camera,
     subtitle: subtitle,
     loading: loading,
-    pip: pip
+    pip: pip,
+    episodes: episodes,
 };
 
 export default Icons;

@@ -158,8 +158,7 @@
         position: absolute;
         bottom: 0;
         &.dplayer-comment-box {
-            display: none;
-            position: absolute;
+            position: relative;
             transition: all 0.3s ease-in-out;
             z-index: 2;
             height: 38px;
@@ -167,18 +166,10 @@
             left: 20px;
             right: 20px;
             color: #fff;
+            display: flex;
+            align-items: center;
             .dplayer-icon {
                 padding: 7px;
-            }
-            .dplayer-comment-setting-icon {
-                position: absolute;
-                left: 0;
-                top: 0;
-            }
-            .dplayer-send-icon {
-                position: absolute;
-                right: 0;
-                top: 0;
             }
             .dplayer-comment-setting-box {
                 position: absolute;
@@ -261,13 +252,19 @@
                     }
                 }
             }
+            .dplayer-comment-wrap {
+                display: flex;
+                width: 320px;
+                height: 30px;
+                line-height: 30px;
+                background: hsla(0, 0%, 100%, .35);
+                border-radius: 2px;
+            }
             .dplayer-comment-input {
                 outline: none;
                 border: none;
-                padding: 8px 31px;
                 font-size: 14px;
                 line-height: 18px;
-                text-align: center;
                 border-radius: 4px;
                 background: none;
                 margin: 0;
@@ -289,10 +286,16 @@
                 padding: 7px;
             }
         }
+        &.dplayer-icons-center {
+            left: 50%;
+            transform: translateX(-50%);
+            .dplayer-icon {
+                padding: 7px;
+            }
+        }
         &.dplayer-icons-right {
             right: 20px;
             display: flex;
-            align-items: center;
             .dplayer-icon {
                 padding: 8px;
             }
@@ -414,14 +417,6 @@
 
         .dplayer-episode {
             display: inline-block;
-
-            .dplayer-episode-icon {
-                font-size: 14px;
-                color: white;
-                cursor: pointer;
-                padding: 0 8px;
-            }
-
             .dplayer-episode-box {
                 position: absolute;
                 right: 0;

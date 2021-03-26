@@ -51,7 +51,7 @@ function initPlayers () {
         },
         danmaku: {
             id: '9E2E3368B56CDBB4',
-            api: 'https://api.prprpr.me/dplayer/'
+            api: 'https://online.njtech.edu.cn/'
         }
     });
     // dp1
@@ -71,8 +71,7 @@ function initPlayers () {
         },
         danmaku: {
             id: '9E2E3368B56CDBB4',
-            api: 'https://api.prprpr.me/dplayer/',
-            addition: ['https://cn-south-17-dplayer-49648867.oss.dogecdn.com/1678963.json']
+            api: 'https://online.njtech.edu.cn/',
         }
     });
 
@@ -103,7 +102,7 @@ function initPlayers () {
         },
         danmaku: {
             id: '9E2E3368B56CDBB4',
-            api: 'https://api.prprpr.me/dplayer/',
+            api: 'https://online.njtech.edu.cn/',
             token: 'tokendemo',
             maximum: 3000,
             user: 'DIYgod',
@@ -252,7 +251,7 @@ function switchDPlayer () {
             type: 'auto',
         }, {
             id: '5rGf5Y2X55qu6Z2p',
-            api: 'https://api.prprpr.me/dplayer/',
+            api: 'https://online.njtech.edu.cn/',
             maximum: 3000,
             user: 'DIYgod'
         });
@@ -264,7 +263,7 @@ function switchDPlayer () {
             type: 'auto'
         }, {
             id: '9E2E3368B56CDBB42',
-            api: 'https://api.prprpr.me/dplayer/',
+            api: 'https://online.njtech.edu.cn/',
             maximum: 3000,
             user: 'DIYgod'
         });

@@ -23,9 +23,9 @@ class Danmaku {
     load() {
         let apiurl;
         if (this.options.api.maximum) {
-            apiurl = `${this.options.api.address}v3/?id=${this.options.api.id}&max=${this.options.api.maximum}`;
+            apiurl = `${this.options.api.address}danmaku/?id=${this.options.api.id}&max=${this.options.api.maximum}`;
         } else {
-            apiurl = `${this.options.api.address}v3/?id=${this.options.api.id}`;
+            apiurl = `${this.options.api.address}danmaku/?id=${this.options.api.id}`;
         }
         const endpoints = (this.options.api.addition || []).slice(0);
         endpoints.push(apiurl);
@@ -92,7 +92,7 @@ class Danmaku {
             type: dan.type,
         };
         this.options.apiBackend.send({
-            url: this.options.api.address + 'v3/',
+            url: this.options.api.address + 'danmaku/',
             data: danmakuData,
             success: callback,
             error: (msg) => {

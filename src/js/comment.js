@@ -7,9 +7,6 @@ class Comment {
         this.player.template.mask.addEventListener('click', () => {
             this.hide();
         });
-        this.player.template.commentButton.addEventListener('click', () => {
-            this.show();
-        });
         this.player.template.commentSettingButton.addEventListener('click', () => {
             this.toggleSetting();
         });
@@ -24,7 +21,12 @@ class Comment {
             }
         });
 
+        this.player.template.commentInput.addEventListener('blur', () => {
+            this.player.controller.disableAutoHide = false;
+        });
+
         this.player.template.commentInput.addEventListener('click', () => {
+            this.player.controller.disableAutoHide = true;
             this.hideSetting();
         });
         this.player.template.commentInput.addEventListener('keydown', (e) => {

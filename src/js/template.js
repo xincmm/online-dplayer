@@ -66,7 +66,7 @@ class Template {
         this.dtime = this.container.querySelector('.dplayer-dtime');
         this.controller = this.container.querySelector('.dplayer-controller');
         this.commentInput = this.container.querySelector('.dplayer-comment-input');
-        this.commentButton = this.container.querySelector('.dplayer-comment-icon');
+        // this.commentButton = this.container.querySelector('.dplayer-comment-icon');
         this.commentSettingBox = this.container.querySelector('.dplayer-comment-setting-box');
         this.commentSettingButton = this.container.querySelector('.dplayer-comment-setting-icon');
         this.commentSettingFill = this.container.querySelector('.dplayer-comment-setting-icon path');
