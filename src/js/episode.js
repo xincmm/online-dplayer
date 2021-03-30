@@ -20,10 +20,14 @@ class Episode {
                 }
                 this.player.events.trigger('episode_change', index);
                 item.classList.add('episode-active');
-                this.player.switchVideo({
-                    url: this.player.options.episodes[index].path,
-                }, null,  index);
-                this.hide()
+                this.player.switchVideo(
+                    {
+                        url: this.player.options.episodes[index].path,
+                    },
+                    null,
+                    index
+                );
+                this.hide();
             });
         });
     }

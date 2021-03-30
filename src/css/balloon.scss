@@ -1,14 +1,14 @@
 @import '../../node_modules/balloon-css/balloon.css';
 
-[data-balloon]:before {
+[aria-label][data-balloon-pos="up"]:before {
     display: none;
 }
 
-[data-balloon]:after {
+[aria-label][data-balloon-pos="up"]:after {
     padding: 0.3em 0.7em;
     background: rgba(17, 17, 17, 0.7);
 }
 
-[data-balloon][data-balloon-pos="up"]:after {
+[aria-label][data-balloon-pos="up"]:after {
     margin-bottom: 0;
 }
