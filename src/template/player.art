@@ -92,9 +92,15 @@
             </div>
             <div class="dplayer-comment-wrap">
                 <div class="dplayer-setting-item dplayer-setting-showdan">
-                    <div class="dplayer-toggle">
+                    <div class="dplayer-switch">
                         <input class="dplayer-showdan-setting-input" type="checkbox" name="dplayer-toggle-dan">
-                        <label for="dplayer-toggle-dan" style="background: {{ options.theme }}"></label>
+                        <label for="dplayer-toggle-dan">
+                            <span class="switch-dot">
+                                <span>
+                                    {{@ icons.dan }}
+                                </span>
+                            </span>
+                        </label>
                     </div>
                 </div>
                 <button class="dplayer-icon dplayer-comment-setting-icon">

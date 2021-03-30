@@ -31,7 +31,6 @@ class Setting {
         }
         this.player.template.showDanmakuToggle.checked = this.showDanmaku;
         this.player.template.showDanmaku.addEventListener('click', () => {
-            this.player.template.showDanmakuToggle.checked = !this.player.template.showDanmakuToggle.checked;
             if (this.player.template.showDanmakuToggle.checked) {
                 this.showDanmaku = true;
                 this.player.danmaku.show();
