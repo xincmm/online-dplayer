@@ -139,12 +139,12 @@
                 will-change: width;
                 .dplayer-thumb {
                     position: absolute;
-                    top: 0;
-                    right: 5px;
+                    top: -4px;
+                    right: 0;
                     margin-top: -4px;
                     margin-right: -10px;
-                    height: 11px;
-                    width: 11px;
+                    height: 18px;
+                    width: 18px;
                     border-radius: 50%;
                     cursor: pointer;
                     transition: all 0.3s ease-in-out;
@@ -167,6 +167,7 @@
             right: 20px;
             color: #fff;
             display: flex;
+            justify-content: space-around;
             align-items: center;
             .dplayer-icon {
                 padding: 7px;
@@ -254,31 +255,68 @@
             }
             .dplayer-comment-wrap {
                 display: flex;
-                width: 320px;
-                height: 30px;
-                line-height: 30px;
-                background: hsla(0, 0%, 100%, .35);
-                border-radius: 2px;
+                width: 100%;
+                height: 38px;
+                line-height: 38px;
+                align-items: center;
+                justify-content: center;
+            }
+            .dplayer-setting-showdan {
+                .dplayer-toggle {
+                    position: unset !important;
+                }
+
+                label {
+                    height: 18px;
+                    width: 34px;
+                    border-radius: 10px;
+                    border: 0;
+                    display: inline-block;
+                }
+
+                input + label:before {
+                    content: "弹";
+                    width: 12px !important;
+                    margin: 2px 5px;
+                    color: white;
+                    font-size: 12px;
+                    line-height: 1;
+                    background: unset !important;
+                }
+
+                input + label:after {
+                    height: 18px;
+                    width: 18px;
+                    border-radius: 50%;
+                }
+
+                input:checked + label:after {
+                    left: 18px;
+                }
             }
             .dplayer-comment-input {
+                height: 26px;
+                line-height: 26px;
                 outline: none;
                 border: none;
+                padding: 5px 10px;
                 font-size: 14px;
-                line-height: 18px;
-                border-radius: 4px;
-                background: none;
-                margin: 0;
-                height: 100%;
+                text-align: left;
+                margin: 0 auto;
+                -webkit-box-sizing: border-box;
                 box-sizing: border-box;
-                width: 100%;
                 color: #fff;
-                &::placeholder {
-                    color: #fff;
-                    opacity: 0.8;
-                }
-                &::-ms-clear {
-                    display: none;
-                }
+                background: rgba(255, 255, 255, 0.2);
+                border-radius: 4px 0 0 4px;
+                bottom: 0;
+                position: relative;
+                flex: 1;
+            }
+            .dplayer-send-icon {
+                height: 26px;
+                line-height: 12px;
+                color: #fff;
+                border-radius: 0 4px 4px 0;
             }
         }
         &.dplayer-icons-left {
@@ -288,6 +326,7 @@
         }
         &.dplayer-icons-center {
             left: 50%;
+            width: 40%;
             transform: translateX(-50%);
             .dplayer-icon {
                 padding: 7px;

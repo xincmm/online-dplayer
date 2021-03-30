@@ -91,12 +91,18 @@
                 </div>
             </div>
             <div class="dplayer-comment-wrap">
-                <button class="dplayer-icon dplayer-comment-setting-icon" aria-label="{{ tran('Setting') }}" data-balloon-pos="up">
-                    <span class="dplayer-icon-content">{{@ icons.pallette }}</span>
+                <div class="dplayer-setting-item dplayer-setting-showdan">
+                    <div class="dplayer-toggle">
+                        <input class="dplayer-showdan-setting-input" type="checkbox" name="dplayer-toggle-dan">
+                        <label for="dplayer-toggle-dan" style="background: {{ options.theme }}"></label>
+                    </div>
+                </div>
+                <button class="dplayer-icon dplayer-comment-setting-icon">
+                    <span class="dplayer-icon-content">{{@ icons.danmakuSetting }}</span>
                 </button>
                 <input class="dplayer-comment-input" type="text" placeholder="{{ tran('Input danmaku, hit Enter') }}" maxlength="30">
-                <button class="dplayer-icon dplayer-send-icon" aria-label="{{ tran('Send') }}" data-balloon-pos="up">
-                    <span class="dplayer-icon-content">{{@ icons.send }}</span>
+                <button class="dplayer-icon dplayer-send-icon" aria-label="{{ tran('Send') }}" data-balloon-pos="up" style="background: {{ options.theme }}">
+                    发送
                 </button>
             </div>
         </div>
@@ -167,13 +173,6 @@
                             <label for="dplayer-toggle"></label>
                         </div>
                     </div>
-                    <div class="dplayer-setting-item dplayer-setting-showdan">
-                        <span class="dplayer-label">{{ tran('Show danmaku') }}</span>
-                        <div class="dplayer-toggle">
-                            <input class="dplayer-showdan-setting-input" type="checkbox" name="dplayer-toggle-dan">
-                            <label for="dplayer-toggle-dan"></label>
-                        </div>
-                    </div>
                     <div class="dplayer-setting-item dplayer-setting-danunlimit">
                         <span class="dplayer-label">{{ tran('Unlimited danmaku') }}</span>
                         <div class="dplayer-toggle">
@@ -229,7 +228,9 @@
         <div class="dplayer-bar">
             <div class="dplayer-loaded" style="width: 0;"></div>
             <div class="dplayer-played" style="width: 0; background: {{ options.theme }}">
-                <span class="dplayer-thumb" style="background: {{ options.theme }}"></span>
+                <span class="dplayer-thumb">
+                    {{@ icons.thumb }}
+                </span>
             </div>
         </div>
     </div>

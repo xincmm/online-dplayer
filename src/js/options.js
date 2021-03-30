@@ -8,7 +8,7 @@ export default (options) => {
         container: options.element || document.getElementsByClassName('dplayer')[0],
         live: false,
         autoplay: false,
-        theme: '#b7daff',
+        theme: '#00a1d6',
         loop: false,
         lang: (navigator.language || navigator.browserLanguage).toLowerCase(),
         screenshot: false,

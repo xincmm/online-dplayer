@@ -267,3 +267,8 @@ function initPlayers () {
 //         });
 //     }
 }
+document.querySelector(".iina").addEventListener('click', function () {
+    const iinaUrl = `potplayer://https://data1online.njtech.edu.cn/online-2020-2/2020-10-31/外星也难民/1.mp4`;
+    console.log(`iinaUrl= ${iinaUrl}`);
+    window.open(iinaUrl, "_blank");
+})

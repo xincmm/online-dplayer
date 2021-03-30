@@ -16,6 +16,8 @@ import subtitle from '../assets/subtitle.svg';
 import loading from '../assets/loading.svg';
 import pip from '../assets/pip.svg';
 import episodes from '../assets/episodes.svg';
+import danmakuSetting from '../assets/danmaku-setting.svg';
+import thumb from '../assets/thumb.svg';
 
 const Icons = {
     play: play,
@@ -36,6 +38,8 @@ const Icons = {
     loading: loading,
     pip: pip,
     episodes: episodes,
+    danmakuSetting: danmakuSetting,
+    thumb: thumb,
 };
 
 export default Icons;
