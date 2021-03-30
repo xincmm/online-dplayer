@@ -101,7 +101,7 @@
                     <span class="dplayer-icon-content">{{@ icons.danmakuSetting }}</span>
                 </button>
                 <input class="dplayer-comment-input" type="text" placeholder="{{ tran('Input danmaku, hit Enter') }}" maxlength="30">
-                <button class="dplayer-icon dplayer-send-icon" aria-label="{{ tran('Send') }}" data-balloon-pos="up" style="background: {{ options.theme }}">
+                <button class="dplayer-icon dplayer-send-icon" style="background: {{ options.theme }}">
                     发送
                 </button>
             </div>
