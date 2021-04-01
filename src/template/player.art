@@ -106,7 +106,7 @@
                 <button class="dplayer-icon dplayer-comment-setting-icon">
                     <span class="dplayer-icon-content">{{@ icons.danmakuSetting }}</span>
                 </button>
-                <input class="dplayer-comment-input" type="text" placeholder="{{ tran('Input danmaku, hit Enter') }}" maxlength="30">
+                <input readonly="readonly" class="dplayer-comment-input" type="text" placeholder="暂时关闭发送弹幕功能" maxlength="30">
                 <button class="dplayer-icon dplayer-send-icon" style="background: {{ options.theme }}">
                     发送
                 </button>
