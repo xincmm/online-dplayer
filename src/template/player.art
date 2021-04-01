@@ -134,7 +134,7 @@
         {{ /if }}
         {{ if options.pip }}
         <div class="dplayer-subtitle-btn">
-            <button class="dplayer-icon dplayer-pip-icon" aria-label="{{ tran('Hide subtitle') }}" data-balloon-pos="up">
+            <button class="dplayer-icon dplayer-pip-icon" aria-label="{{ tran('Pip') }}" data-balloon-pos="up">
                 <span class="dplayer-icon-content">{{@ icons.pip }}</span>
             </button>
         </div>

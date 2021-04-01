@@ -58,6 +58,7 @@ const tranTxt = {
         'Hide subtitle': '隐藏字幕',
         Volume: '音量',
         Live: '直播',
+        Pip: '画中画',
         'Video info': '视频统计信息',
     },
     'zh-tw': {

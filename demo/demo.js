@@ -60,8 +60,15 @@ function initPlayers () {
         preload: 'none',
         showEpisode: true,
         episodes: [{"id":41854,"topicId":3635,"genre":"video","index":1,"name":"第1集","path":"http://202.119.245.12:8080/2020-02-11/紧急呼救:孤星/1.mp4"},{"id":41855,"topicId":3635,"genre":"video","index":2,"name":"第2集","path":"http://202.119.245.12:8080/2020-02-11/紧急呼救:孤星/2.mp4"},{"id":41856,"topicId":3635,"genre":"video","index":3,"name":"第3集","path":"http://202.119.245.12:8080/2020-02-11/紧急呼救:孤星/3.mp4"},{"id":41857,"topicId":3635,"genre":"video","index":4,"name":"第4集","path":"http://202.119.245.12:8080/2020-02-11/紧急呼救:孤星/4.mp4"}],
+        subtitle: {
+            url: '/%E5%93%A5%E6%96%AF%E6%8B%89%E5%A4%A7%E6%88%98%E9%87%91%E5%88%9A.vtt',
+            type: 'webvtt',
+            fontSize: '25px',
+            bottom: '2%',
+            color: '#b7daff'
+        },
         video: {
-            url: 'https://data2online.njtech.edu.cn/online-2020-2/2021-03-29/怪物事变/12.mp4',
+            url: 'https://data2online.njtech.edu.cn/online-2020-2/2021-03-31/哥斯拉大战金刚.mp4',
         },
         danmaku: {
             id: '4751-0',
