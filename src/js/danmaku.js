@@ -94,7 +94,11 @@ class Danmaku {
         this.options.apiBackend.send({
             url: this.options.api.address + 'danmaku/',
             data: danmakuData,
-            success: callback,
+            success: () => {
+                // 重新请求弹幕数据，供前端展示
+                this.load();
+                callback();
+            },
             error: (msg) => {
                 this.options.error(msg || this.options.tran('Danmaku send failed'));
             },
