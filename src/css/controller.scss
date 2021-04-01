@@ -266,7 +266,7 @@
                 display: flex;
 
                 .dplayer-switch {
-                    position: unset !important;
+                    position: relative !important;
                     input {
                         position: absolute;
                         width: 100%;
