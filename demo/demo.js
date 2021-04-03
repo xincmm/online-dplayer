@@ -2,13 +2,15 @@
 const stats = new Stats();
 stats.showPanel(0); // 0: fps, 1: ms, 2: mb, 3+: custom
 document.body.appendChild(stats.dom);
-function animate () {
+
+function animate() {
     stats.begin();
     // monitored code goes here
     stats.end();
 
     requestAnimationFrame(animate);
 }
+
 requestAnimationFrame(animate);
 
 initPlayers();
@@ -35,7 +37,7 @@ initPlayers();
 //     });
 // }
 
-function initPlayers () {
+function initPlayers() {
     // dplayer-float
     // window.dpFloat = new DPlayer({
     //     container: document.getElementById('dplayer-container'),
@@ -59,25 +61,54 @@ function initPlayers () {
         container: document.getElementById('dplayer1'),
         preload: 'none',
         showEpisode: true,
-        episodes: [{"id":41854,"topicId":3635,"genre":"video","index":1,"name":"第1集","path":"http://202.119.245.12:8080/2020-02-11/紧急呼救:孤星/1.mp4"},{"id":41855,"topicId":3635,"genre":"video","index":2,"name":"第2集","path":"http://202.119.245.12:8080/2020-02-11/紧急呼救:孤星/2.mp4"},{"id":41856,"topicId":3635,"genre":"video","index":3,"name":"第3集","path":"http://202.119.245.12:8080/2020-02-11/紧急呼救:孤星/3.mp4"},{"id":41857,"topicId":3635,"genre":"video","index":4,"name":"第4集","path":"http://202.119.245.12:8080/2020-02-11/紧急呼救:孤星/4.mp4"}],
+        episodes: [{
+            'id': 41854,
+            'topicId': 3635,
+            'genre': 'video',
+            'index': 1,
+            'name': '第1集',
+            'path': 'http://202.119.245.12:8080/2020-02-11/紧急呼救:孤星/1.mp4',
+        }, {
+            'id': 41855,
+            'topicId': 3635,
+            'genre': 'video',
+            'index': 2,
+            'name': '第2集',
+            'path': 'http://202.119.245.12:8080/2020-02-11/紧急呼救:孤星/2.mp4',
+        }, {
+            'id': 41856,
+            'topicId': 3635,
+            'genre': 'video',
+            'index': 3,
+            'name': '第3集',
+            'path': 'http://202.119.245.12:8080/2020-02-11/紧急呼救:孤星/3.mp4',
+        }, {
+            'id': 41857,
+            'topicId': 3635,
+            'genre': 'video',
+            'index': 4,
+            'name': '第4集',
+            'path': 'http://202.119.245.12:8080/2020-02-11/紧急呼救:孤星/4.mp4',
+        }],
         subtitle: {
             url: '/%E5%93%A5%E6%96%AF%E6%8B%89%E5%A4%A7%E6%88%98%E9%87%91%E5%88%9A.vtt',
             type: 'webvtt',
             fontSize: '25px',
             bottom: '2%',
-            color: '#b7daff'
+            color: '#b7daff',
         },
         video: {
-            url: 'https://data2online.njtech.edu.cn/online-2020-2/2021-03-31/哥斯拉大战金刚.mp4'
+            url: 'https://data2online.njtech.edu.cn/online-2020-2/2021-03-31/哥斯拉大战金刚.mp4',
+            thumbnails: 'https://minio.online.njtech.edu.cn/resource/uPic/1617463430thumbnails.jpg',
         },
         danmaku: {
             id: '4751-0',
             api: 'https://online.njtech.edu.cn/',
-            addition: ['https://online.njtech.edu.cn/danmaku/bilibili?bv=BV1iT4y1N7Te']
-        }
+            addition: ['https://online.njtech.edu.cn/danmaku/bilibili?bv=BV1iT4y1N7Te'],
+        },
     });
     window.dp1.on('danmaku_loaded', function(test) {
-    })
+    });
 
 //     // dp2
 //     window.dp2 = new DPlayer({
@@ -273,7 +304,8 @@ function initPlayers () {
 //         });
 //     }
 }
-document.querySelector(".iina").addEventListener('click', function () {
+
+document.querySelector('.iina').addEventListener('click', function() {
     const iinaUrl = `potplayer://https://data1online.njtech.edu.cn/online-2020-2/2020-10-31/外星也难民/1.mp4`;
-    window.open(iinaUrl, "_blank");
-})
+    window.open(iinaUrl, '_blank');
+});
