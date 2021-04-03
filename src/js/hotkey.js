@@ -33,6 +33,13 @@ class HotKey {
                                 percentage = player.volume() - 0.1;
                                 player.volume(percentage);
                                 break;
+                            case 'KeyF':
+                                if (player.fullScreen.isFullScreen('browser')) {
+                                    player.fullScreen.cancel('browser');
+                                } else {
+                                    player.fullScreen.request('browser');
+                                }
+                                break;
                         }
                     }
                 }
@@ -46,12 +53,6 @@ class HotKey {
                         player.fullScreen.cancel('web');
                     }
                     break;
-                case 'KeyF':
-                    if (player.fullScreen.isFullScreen('browser')) {
-                        player.fullScreen.cancel('browser');
-                    } else {
-                        player.fullScreen.request('browser');
-                    }
             }
         });
     }
