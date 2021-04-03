@@ -6,29 +6,29 @@ class HotKey {
                     const tag = document.activeElement.tagName.toUpperCase();
                     const editable = document.activeElement.getAttribute('contenteditable');
                     if (tag !== 'INPUT' && tag !== 'TEXTAREA' && editable !== '' && editable !== 'true') {
-                        const event = e || window.event;
+                        const event = e;
                         let percentage;
-                        switch (event.keyCode) {
-                            case 32:
+                        switch (event.code) {
+                            case 'Space':
                                 event.preventDefault();
                                 player.toggle();
                                 break;
-                            case 37:
+                            case 'ArrowLeft':
                                 event.preventDefault();
                                 player.seek(player.video.currentTime - 5);
                                 player.controller.setAutoHide();
                                 break;
-                            case 39:
+                            case 'ArrowRight':
                                 event.preventDefault();
                                 player.seek(player.video.currentTime + 5);
                                 player.controller.setAutoHide();
                                 break;
-                            case 38:
+                            case 'ArrowUp':
                                 event.preventDefault();
                                 percentage = player.volume() + 0.1;
                                 player.volume(percentage);
                                 break;
-                            case 40:
+                            case 'ArrowDown':
                                 event.preventDefault();
                                 percentage = player.volume() - 0.1;
                                 player.volume(percentage);
@@ -40,13 +40,18 @@ class HotKey {
         }
 
         document.addEventListener('keydown', (e) => {
-            const event = e || window.event;
-            switch (event.keyCode) {
-                case 27:
+            switch (e.code) {
+                case 'Escape':
                     if (player.fullScreen.isFullScreen('web')) {
                         player.fullScreen.cancel('web');
                     }
                     break;
+                case 'KeyF':
+                    if (player.fullScreen.isFullScreen('browser')) {
+                        player.fullScreen.cancel('browser');
+                    } else {
+                        player.fullScreen.request('browser');
+                    }
             }
         });
     }

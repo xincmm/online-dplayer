@@ -68,7 +68,7 @@ function initPlayers () {
             color: '#b7daff'
         },
         video: {
-            url: 'https://data2online.njtech.edu.cn/online-2020-2/2021-03-31/哥斯拉大战金刚.mp4',
+            url: 'https://data2online.njtech.edu.cn/online-2020-2/2021-03-31/哥斯拉大战金刚.mp4'
         },
         danmaku: {
             id: '4751-0',
@@ -77,7 +77,6 @@ function initPlayers () {
         }
     });
     window.dp1.on('danmaku_loaded', function(test) {
-        console.log("test =>", test)
     })
 
 //     // dp2
@@ -276,6 +275,5 @@ function initPlayers () {
 }
 document.querySelector(".iina").addEventListener('click', function () {
     const iinaUrl = `potplayer://https://data1online.njtech.edu.cn/online-2020-2/2020-10-31/外星也难民/1.mp4`;
-    console.log(`iinaUrl= ${iinaUrl}`);
     window.open(iinaUrl, "_blank");
 })
