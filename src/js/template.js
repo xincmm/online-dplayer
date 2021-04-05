@@ -57,8 +57,10 @@ class Template {
         this.showDanmakuToggle = this.container.querySelector('.dplayer-showdan-setting-input');
         this.unlimitDanmaku = this.container.querySelector('.dplayer-setting-danunlimit');
         this.unlimitDanmakuToggle = this.container.querySelector('.dplayer-danunlimit-setting-input');
-        this.speed = this.container.querySelector('.dplayer-setting-speed');
-        this.speedItem = this.container.querySelectorAll('.dplayer-setting-speed-item');
+        this.speed = this.container.querySelector('.dplayer-speed');
+        this.speedButton = this.container.querySelector('.dplayer-speed-button');
+        this.speedPanel = this.container.querySelector('.dplayer-speed-panel');
+        this.speedItem = this.container.querySelectorAll('.dplayer-speed-item');
         this.danmakuOpacityBar = this.container.querySelector('.dplayer-danmaku-bar-inner');
         this.danmakuOpacityBarWrap = this.container.querySelector('.dplayer-danmaku-bar');
         this.danmakuOpacityBarWrapWrap = this.container.querySelector('.dplayer-danmaku-bar-wrap');
@@ -66,7 +68,6 @@ class Template {
         this.dtime = this.container.querySelector('.dplayer-dtime');
         this.controller = this.container.querySelector('.dplayer-controller');
         this.commentInput = this.container.querySelector('.dplayer-comment-input');
-        // this.commentButton = this.container.querySelector('.dplayer-comment-icon');
         this.commentSettingBox = this.container.querySelector('.dplayer-comment-setting-box');
         this.commentSettingButton = this.container.querySelector('.dplayer-comment-setting-icon');
         this.commentSettingFill = this.container.querySelector('.dplayer-comment-setting-icon path');

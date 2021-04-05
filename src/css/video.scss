@@ -8,6 +8,7 @@
     display: none;
     &.dplayer-mask-show {
         display: block;
+        cursor: pointer;
     }
 }
 

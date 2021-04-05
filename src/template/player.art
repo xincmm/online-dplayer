@@ -114,6 +114,38 @@
         </div>
     </div>
     <div class="dplayer-icons dplayer-icons-right">
+        <div class="dplayer-icon dplayer-speed">
+            <span class="dplayer-label dplayer-speed-button">{{ tran('Speed') }}</span>
+            <div class="dplayer-speed-panel">
+                <div class="dplayer-speed-item" data-speed="3.0">
+                    <span class="dplayer-label">3.0</span>
+                </div>
+                <div class="dplayer-speed-item" data-speed="2.5">
+                    <span class="dplayer-label">2.5</span>
+                </div>
+                <div class="dplayer-speed-item" data-speed="2">
+                    <span class="dplayer-label">2</span>
+                </div>
+                 <div class="dplayer-speed-item" data-speed="1.75">
+                    <span class="dplayer-label">1.75</span>
+                </div>
+                <div class="dplayer-speed-item" data-speed="1.5">
+                    <span class="dplayer-label">1.5</span>
+                </div>
+                <div class="dplayer-speed-item" data-speed="1.25">
+                    <span class="dplayer-label">1.25</span>
+                </div>
+                <div class="dplayer-speed-item dplayer-speed-item-active" data-speed="1">
+                    <span class="dplayer-label ">{{ tran('Normal') }}</span>
+                </div>
+                <div class="dplayer-speed-item" data-speed="0.75">
+                    <span class="dplayer-label">0.75</span>
+                </div>
+                <div class="dplayer-speed-item" data-speed="0.5">
+                    <span class="dplayer-label">0.5</span>
+                </div>
+            </div>
+        </div>
         {{ if options.video.quality }}
         <div class="dplayer-quality">
             <button class="dplayer-icon dplayer-quality-icon">{{ options.video.quality[options.video.defaultQuality].name }}</button>
@@ -168,10 +200,6 @@
             </button>
             <div class="dplayer-setting-box">
                 <div class="dplayer-setting-origin-panel">
-                    <div class="dplayer-setting-item dplayer-setting-speed">
-                        <span class="dplayer-label">{{ tran('Speed') }}</span>
-                        <div class="dplayer-toggle">{{@ icons.right }}</div>
-                    </div>
                     <div class="dplayer-setting-item dplayer-setting-loop">
                         <span class="dplayer-label">{{ tran('Loop') }}</span>
                         <div class="dplayer-toggle">
@@ -195,26 +223,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="dplayer-setting-speed-panel">
-                    <div class="dplayer-setting-speed-item" data-speed="0.5">
-                        <span class="dplayer-label">0.5</span>
-                    </div>
-                    <div class="dplayer-setting-speed-item" data-speed="0.75">
-                        <span class="dplayer-label">0.75</span>
-                    </div>
-                    <div class="dplayer-setting-speed-item" data-speed="1">
-                        <span class="dplayer-label">{{ tran('Normal') }}</span>
-                    </div>
-                    <div class="dplayer-setting-speed-item" data-speed="1.25">
-                        <span class="dplayer-label">1.25</span>
-                    </div>
-                    <div class="dplayer-setting-speed-item" data-speed="1.5">
-                        <span class="dplayer-label">1.5</span>
-                    </div>
-                    <div class="dplayer-setting-speed-item" data-speed="2">
-                        <span class="dplayer-label">2</span>
                     </div>
                 </div>
             </div>

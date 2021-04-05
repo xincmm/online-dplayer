@@ -20,6 +20,7 @@ import HotKey from './hotkey';
 import ContextMenu from './contextmenu';
 import InfoPanel from './info-panel';
 import Episode from './episode';
+import Speed from './speed';
 import tplVideo from '../template/video.art';
 
 let index = 0;
@@ -135,6 +136,7 @@ class DPlayer {
         if (options.showEpisode) {
             new Episode(this);
         }
+        new Speed(this);
 
         document.addEventListener(
             'click',

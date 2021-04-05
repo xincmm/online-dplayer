@@ -90,16 +90,8 @@ function initPlayers() {
             'name': '第4集',
             'path': 'http://202.119.245.12:8080/2020-02-11/紧急呼救:孤星/4.mp4',
         }],
-        subtitle: {
-            url: '/%E5%93%A5%E6%96%AF%E6%8B%89%E5%A4%A7%E6%88%98%E9%87%91%E5%88%9A.vtt',
-            type: 'webvtt',
-            fontSize: '25px',
-            bottom: '2%',
-            color: '#b7daff',
-        },
         video: {
             url: 'https://data2online.njtech.edu.cn/online-2020-2/2021-03-31/哥斯拉大战金刚.mp4',
-            thumbnails: 'https://minio.online.njtech.edu.cn/resource/uPic/1617463430thumbnails.jpg',
         },
         danmaku: {
             id: '4751-0',

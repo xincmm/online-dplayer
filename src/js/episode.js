@@ -41,7 +41,6 @@ class Episode {
     show() {
         this.player.template.episodeBox.classList.add('dplayer-episode-box-open');
         this.player.template.mask.classList.add('dplayer-mask-show');
-
         this.player.controller.disableAutoHide = true;
     }
 }
