@@ -6,6 +6,16 @@ class Episode {
             this.hide();
         });
 
+        this.player.events.on('fullscreen', () => {
+            console.log('进入全屏');
+            this.player.template.episodeButton.classList.add('dplayer-episode-icon-show');
+        });
+
+        this.player.events.on('fullscreen_cancel', () => {
+            console.log('退出全屏');
+            this.player.template.episodeButton.classList.remove('dplayer-episode-icon-show');
+        });
+
         this.player.template.episodeButton.addEventListener('click', () => {
             this.show();
         });

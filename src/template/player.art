@@ -91,7 +91,7 @@
                 </div>
             </div>
             <div class="dplayer-comment-wrap">
-                <div class="dplayer-setting-item dplayer-setting-showdan">
+                <div class="dplayer-setting-showdan">
                     <div class="dplayer-switch">
                         <input class="dplayer-showdan-setting-input" type="checkbox" name="dplayer-toggle-dan">
                         <label for="dplayer-toggle-dan">

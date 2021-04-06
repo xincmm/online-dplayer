@@ -21,6 +21,7 @@ import ContextMenu from './contextmenu';
 import InfoPanel from './info-panel';
 import Episode from './episode';
 import Speed from './speed';
+import Pip from './pip';
 import tplVideo from '../template/video.art';
 
 let index = 0;
@@ -68,22 +69,8 @@ class DPlayer {
         });
 
         this.video = this.template.video;
-        // 画中画
-        if (this.options.pip && this.template.pipButton) {
-            this.template.pipButton.addEventListener('click', () => {
-                if (!document.pictureInPictureElement) {
-                    // 开启
-                    this.video.requestPictureInPicture().catch((error) => {
-                        console.log(error, 'Video failed to enter Picture-in-Picture mode.');
-                    });
-                } else {
-                    // 关闭
-                    document.exitPictureInPicture().catch((error) => {
-                        console.log(error, 'Video failed to leave Picture-in-Picture mode.');
-                    });
-                }
-            });
-        }
+
+        this.pip = new Pip(this.options, this.template);
 
         this.bar = new Bar(this.template);
 
