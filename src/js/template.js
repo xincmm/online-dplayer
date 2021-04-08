@@ -28,6 +28,7 @@ class Template {
 
         this.volumeBar = this.container.querySelector('.dplayer-volume-bar-inner');
         this.volumeBarWrap = this.container.querySelector('.dplayer-volume-bar');
+        this.volumeText = this.container.querySelector('.dplayer-volume-text');
         this.volumeBarWrapWrap = this.container.querySelector('.dplayer-volume-bar-wrap');
         this.volumeButton = this.container.querySelector('.dplayer-volume');
         this.volumeButtonIcon = this.container.querySelector('.dplayer-volume-icon');
@@ -58,8 +59,6 @@ class Template {
         this.unlimitDanmaku = this.container.querySelector('.dplayer-setting-danunlimit');
         this.unlimitDanmakuToggle = this.container.querySelector('.dplayer-danunlimit-setting-input');
         this.speed = this.container.querySelector('.dplayer-speed');
-        this.speedButton = this.container.querySelector('.dplayer-speed-button');
-        this.speedPanel = this.container.querySelector('.dplayer-speed-panel');
         this.speedItem = this.container.querySelectorAll('.dplayer-speed-item');
         this.danmakuOpacityBar = this.container.querySelector('.dplayer-danmaku-bar-inner');
         this.danmakuOpacityBarWrap = this.container.querySelector('.dplayer-danmaku-bar');

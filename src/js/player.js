@@ -251,13 +251,12 @@ class DPlayer {
      * Set volume
      */
     volume(percentage, nostorage, nonotice) {
-        percentage = parseFloat(percentage);
         if (!isNaN(percentage)) {
             percentage = Math.max(percentage, 0);
             percentage = Math.min(percentage, 1);
-            this.bar.set('volume', percentage, 'width');
-            const formatPercentage = `${(percentage * 100).toFixed(0)}%`;
-            this.template.volumeBarWrapWrap.dataset.balloon = formatPercentage;
+            this.bar.set('volume', percentage, 'height');
+            this.template.volumeText.innerHTML = (percentage * 100).toFixed(0);
+            this.template.volumeBarWrapWrap.dataset.balloon = `${(percentage * 100).toFixed(0)}%`;
             if (!nostorage) {
                 this.user.set('volume', percentage);
             }

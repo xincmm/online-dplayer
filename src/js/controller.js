@@ -173,38 +173,51 @@ class Controller {
     }
 
     initVolumeButton() {
-        const vWidth = 35;
+        this.player.template.volumeButton.addEventListener('mouseover', () => {
+            this.player.template.volumeButton.classList.add('dplayer-volume-active');
+        });
+        this.player.template.volumeBarWrapWrap.addEventListener('mouseleave', () => {
+            this.player.template.volumeButton.classList.remove('dplayer-volume-active');
+        });
+        this.player.template.volumeButton.addEventListener('mouseleave', () => {
+            this.player.template.volumeButton.classList.remove('dplayer-volume-active');
+        });
+
+        const vHeight = 60;
 
         const volumeMove = (event) => {
-            const e = event || window.event;
-            const percentage = ((e.clientX || e.changedTouches[0].clientX) - utils.getBoundingClientRectViewLeft(this.player.template.volumeBarWrap) - 5.5) / vWidth;
-            this.player.volume(percentage);
+            const e = event;
+            const percentage = ((utils.getBoundingClientRectViewBottom(this.player.template.volumeBarWrap) - (e.clientY || e.changedTouches[0].clientY)) / vHeight).toFixed(2);
+            this.player.volume(percentage, false, true);
         };
         const volumeUp = () => {
             document.removeEventListener(utils.nameMap.dragEnd, volumeUp);
             document.removeEventListener(utils.nameMap.dragMove, volumeMove);
-            this.player.template.volumeButton.classList.remove('dplayer-volume-active');
         };
 
         this.player.template.volumeBarWrapWrap.addEventListener('click', (event) => {
-            const e = event || window.event;
-            const percentage = ((e.clientX || e.changedTouches[0].clientX) - utils.getBoundingClientRectViewLeft(this.player.template.volumeBarWrap) - 5.5) / vWidth;
+            const e = event;
+            const percentage = ((utils.getBoundingClientRectViewBottom(this.player.template.volumeBarWrap) - (e.clientY || e.changedTouches[0].clientY)) / vHeight).toFixed(2);
             this.player.volume(percentage);
         });
+
         this.player.template.volumeBarWrapWrap.addEventListener(utils.nameMap.dragStart, () => {
             document.addEventListener(utils.nameMap.dragMove, volumeMove);
             document.addEventListener(utils.nameMap.dragEnd, volumeUp);
             this.player.template.volumeButton.classList.add('dplayer-volume-active');
         });
+
         this.player.template.volumeButtonIcon.addEventListener('click', () => {
             if (this.player.video.muted) {
                 this.player.video.muted = false;
                 this.player.switchVolumeIcon();
-                this.player.bar.set('volume', this.player.volume(), 'width');
+                this.player.bar.set('volume', this.player.volume(), 'height');
+                this.player.template.volumeText.innerHTML = (this.player.volume() * 100).toFixed(0);
             } else {
                 this.player.video.muted = true;
                 this.player.template.volumeIcon.innerHTML = Icons.volumeOff;
-                this.player.bar.set('volume', 0, 'width');
+                this.player.bar.set('volume', 0, 'height');
+                this.player.template.volumeText.innerHTML = (0).toFixed(0);
             }
         });
     }
