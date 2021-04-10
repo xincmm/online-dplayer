@@ -26,12 +26,12 @@ class HotKey {
                             case 'ArrowUp':
                                 event.preventDefault();
                                 percentage = player.volume() + 0.1;
-                                player.volume(percentage);
+                                player.volume(percentage, true, false);
                                 break;
                             case 'ArrowDown':
                                 event.preventDefault();
                                 percentage = player.volume() - 0.1;
-                                player.volume(percentage);
+                                player.volume(percentage, true, false);
                                 break;
                             case 'KeyF':
                                 if (player.fullScreen.isFullScreen('browser')) {

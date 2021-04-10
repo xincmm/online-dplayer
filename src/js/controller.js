@@ -188,7 +188,7 @@ class Controller {
         const volumeMove = (event) => {
             const e = event;
             const percentage = ((utils.getBoundingClientRectViewBottom(this.player.template.volumeBarWrap) - (e.clientY || e.changedTouches[0].clientY)) / vHeight).toFixed(2);
-            this.player.volume(percentage, false, true);
+            this.player.volume(percentage, false);
         };
         const volumeUp = () => {
             document.removeEventListener(utils.nameMap.dragEnd, volumeUp);
@@ -198,7 +198,7 @@ class Controller {
         this.player.template.volumeBarWrapWrap.addEventListener('click', (event) => {
             const e = event;
             const percentage = ((utils.getBoundingClientRectViewBottom(this.player.template.volumeBarWrap) - (e.clientY || e.changedTouches[0].clientY)) / vHeight).toFixed(2);
-            this.player.volume(percentage);
+            this.player.volume(percentage, false);
         });
 
         this.player.template.volumeBarWrapWrap.addEventListener(utils.nameMap.dragStart, () => {

@@ -250,7 +250,7 @@ class DPlayer {
     /**
      * Set volume
      */
-    volume(percentage, nostorage, nonotice) {
+    volume(percentage, nostorage = true, nonotice = true) {
         if (!isNaN(percentage)) {
             percentage = Math.max(percentage, 0);
             percentage = Math.min(percentage, 1);
@@ -260,6 +260,7 @@ class DPlayer {
             if (!nostorage) {
                 this.user.set('volume', percentage);
             }
+
             if (!nonotice) {
                 this.notice(`${this.tran('Volume')} ${(percentage * 100).toFixed(0)}%`);
             }
